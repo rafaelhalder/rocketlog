@@ -53,6 +53,13 @@ Para iniciar o projeto, siga os passos abaixo:
 
     npx prisma init --datasource-provider postgresql
 
+    npx prisma migrate dev
+
+    create_tables
+
+    npx prisma studio
+
+
 ## Estrutura do Projeto
 
 A estrutura do projeto é a seguinte:
