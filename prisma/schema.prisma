@@ -27,6 +27,7 @@ enum DeliveryStatus {
 model User {
   id         String     @id @default(uuid())
   name       String
+  password   String
   email      String     @unique
   role       UserRole   @default(customer)
   deliveries Delivery[]
