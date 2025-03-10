@@ -39,4 +39,4 @@ class UsersController {
     }
 }
 
-export {UsersController}
+export { UsersController }
