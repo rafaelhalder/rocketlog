@@ -59,7 +59,7 @@ Para iniciar o projeto, siga os passos abaixo:
 
     npx prisma studio
 
-
+ npx jest --init
 ## Estrutura do Projeto
 
 A estrutura do projeto é a seguinte:

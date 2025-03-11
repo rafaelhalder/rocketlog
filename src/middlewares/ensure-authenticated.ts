@@ -1,5 +1,5 @@
 import { Request,Response,NextFunction } from "express";
-import {verify} from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import {authConfig} from "@/configs/auth";
 import { AppError } from "@/utils/AppError";
 
@@ -17,7 +17,7 @@ function ensureAuthenticated(request: Request, response: Response, next: NextFun
         }
         //, = Bearer,  token = token
         const [,token] = authHeader.split(" ");
-        const {role,sub: user_id} = verify(token,authConfig.jwt.secret) as TokenPayload;
+        const {role,sub: user_id} = jwt.verify(token,authConfig.jwt.secret) as TokenPayload;
         request.user = {
             id: user_id,
             role
